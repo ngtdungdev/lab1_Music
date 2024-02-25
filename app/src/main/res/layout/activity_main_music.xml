@@ -22,11 +22,7 @@
             android:layout_marginTop="1dp"
             android:layout_marginEnd="1dp"
             android:layout_marginBottom="1dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView2"
@@ -43,15 +39,26 @@
                 android:layout_height="100dp"
                 android:background="#6C9883">
 
+                <ImageView
+                    android:id="@+id/imageWifi"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="-2dp"
+                    android:background="@drawable/baseline_wifi_24" />
+
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="250dp"
                     android:layout_height="50dp"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="28dp"
                     android:layout_toEndOf="@+id/textView"
-                    android:background="@drawable/boder_spinner" />
+                    android:background="@drawable/boder_spinner"
+                    android:popupBackground="@drawable/boder_spinner_green" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -69,8 +76,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="245dp"
-                    android:layout_marginTop="41dp"
+                    android:layout_marginStart="227dp"
+                    android:layout_marginTop="42dp"
                     android:layout_toEndOf="@+id/textView"
                     app:srcCompat="@drawable/baseline_arrow_drop_down_24" />
 
@@ -85,15 +92,15 @@
                     android:id="@+id/listMusic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#6C9883" />
+                    android:background="#6C9883"
+                    android:paddingTop="10dp" />
             </FrameLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layoutmusic"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                android:background="#3C6C5D"
-                tools:layout_editor_absoluteY="826dp">
+                android:background="#3C6C5D">
 
                 <TextView
                     android:id="@+id/nameMusic"

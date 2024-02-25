@@ -137,11 +137,6 @@ public class MusicActivity extends AppCompatActivity {
                 mVisualizer.setEnabled(true);
                 totalDuration = dataMedia.getDuration();
                 partDuration = totalDuration / 100;
-                Bitmap albumArt = getAlbumArt(listPath.get(location));
-                if (albumArt != null) {
-                    imageDisc.setImageBitmap(albumArt);
-                }
-                else  imageDisc.setImageDrawable(ContextCompat.getDrawable(MusicActivity.this, R.drawable.disk1));
                 setEndTime();
                 dataMedia.start();
                 textMusic.setText(listName.get(location));
@@ -247,7 +242,7 @@ public class MusicActivity extends AppCompatActivity {
                     seekBar.setProgress(progress);
                     startTime.setText(currentTime);
                 }
-                else startTime.setText(endTime.getText());
+//                else startTime.setText(endTime.getText());
                 handler.postDelayed(this, 1000);
             }
         };
@@ -347,6 +342,11 @@ public class MusicActivity extends AppCompatActivity {
         super.onBackPressed();
     }
     private void startAnimation() {
+        Bitmap albumArt = getAlbumArt(listPath.get(location));
+        if (albumArt != null) {
+            imageDisc.setImageBitmap(albumArt);
+        }
+        else  imageDisc.setImageDrawable(ContextCompat.getDrawable(MusicActivity.this, R.drawable.disk1));
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
